@@ -3,9 +3,9 @@
 //import { useState } from "react"
 
 
-import myResume from "C:/Users/aakrit/Videos/res/Desktop/web_projects/React/newPortfolio/AakritPortfolio/src/components/Home/ResumeAakrit (1).pdf"
+import myResume from './ResumeAakrit (1).pdf'
 
-import myImage from "C:/Users/aakrit/Videos/res/Desktop/web_projects/React/newPortfolio/AakritPortfolio/public/aakritpassphoto.png"
+import myImage from "../../../public/aakritpassphoto.png"
 import OvalComponent from "./OvalComponent"
 
 function Home() {
