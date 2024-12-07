@@ -2,7 +2,7 @@
 
 function Contact() {
   return (
-    <div className="flex flex-col items-center justify-center max-h-screen bg-transparent p-4"> 
+    <div className="flex flex-col items-center justify-center max-h-screen bg-transparent p-4 md:mt-5"> 
       <div className="max-w-2xl w-full bg-[#181818] shadow-lg shadow-[#6f4ba6] rounded-lg p-6"> 
         <h2 className="text-3xl text-[#6f4ba6] font-bold mb-4">Contact Me</h2> 
         <form className="flex flex-col space-y-4"> 

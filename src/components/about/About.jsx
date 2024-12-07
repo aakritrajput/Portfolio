@@ -5,7 +5,7 @@ function About() {
 
   return (
     
-       <div className="flex flex-col items-center justify-center  min-h-screen "> 
+       <div className="flex flex-col items-center justify-center  min-h-screen  mt-2"> 
         <div className="max-w-6xl w-full bg-transparent  backdrop-blur-lg shadow-allSides shadow-[#177266]  rounded-2xl overflow-hidden lg:py-10 lg:mb-10 flex flex-col md:flex-row"> 
           <div className="md:w-1/3 flex items-center justify-center p-4"> 
             <img src={myImage} alt="Your Image" className="w-48 h-48 rounded-[30px] object-cover"/> 

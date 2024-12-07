@@ -6,10 +6,12 @@ import './index.css'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
 import Root from './components/layout/root.jsx'
-import Home from './components/Home/Home.jsx'
+//import Home from './components/Home/Home.jsx'
 import About from './components/about/About.jsx'
 import Gallery from './components/Gallery/Gallery.jsx'
 import Contact from './components/contact/Contact.jsx'
+import MainHome from './components/Home/MainHome.jsx'
+import EnlargedPhoto from './components/enlargePhoto/EnlargedPhoto.jsx'
 
 const router = createBrowserRouter([
   {
@@ -18,7 +20,7 @@ const router = createBrowserRouter([
     children:[
       {
         path:'',
-        element:<Home/>
+        element:<MainHome/>   
       },
       {
         path:'about',
@@ -33,7 +35,12 @@ const router = createBrowserRouter([
         element:<Contact/>
       }
     ]
+  },{
+    path:"/gallery/:photoId",
+    element:  <EnlargedPhoto/>
   }
+
+
 ])
 
 createRoot(document.getElementById('root')).render(
