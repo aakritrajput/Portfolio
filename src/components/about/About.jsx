@@ -1,5 +1,5 @@
 //import React from 'react'
-import myImage from "C:/Users/aakrit/Videos/res/Desktop/web_projects/React/newPortfolio/AakritPortfolio/src/components/about/aakimage.jpg"
+import myImage from "../../../public/aakritpassphoto.png"
 
 function About() {
 
