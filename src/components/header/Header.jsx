@@ -36,7 +36,7 @@ function Header() {
           <li>
             <NavLink
               to="/"
-              className={({ isActive }) => `${isActive ? "text-purple-800 before:bg-[#7B53B6]" : "text-white hover:text-gray-400 before:bg-white"} lg:p-2 p-1 transition-all duration-200 ease-in-out transform rounded-full relative px-4 py-2 text-white before:absolute before:left-0 before:bottom-0 before:h-0.5 before:w-full before:bg- before:transform before:scale-x-0 before:transition-all before:duration-300 before:ease-in-out focus:before:scale-x-100 hover:before:scale-x-100 md:text-xl sm:text-lg font-mono`}
+              className={({ isActive }) => `${isActive ? "text-purple-700 " : "text-white hover:text-gray-400 "} lg:p-2 p-1 transition-all duration-200 ease-in-out transform rounded-full relative px-4 py-2 text-white before:bg-purple-800 before:absolute before:left-0 before:bottom-0 before:h-0.5 before:w-full before:bg- before:transform before:scale-x-0 before:transition-all before:duration-300 before:ease-in-out focus:before:scale-x-100 hover:before:scale-x-100 md:text-xl sm:text-lg font-mono`}
             >
               Home
             </NavLink>
@@ -44,7 +44,7 @@ function Header() {
           <li>
             <NavLink
               to="/about"
-              className={({ isActive }) => `${isActive ? "text-purple-800 before:bg-[#7B53B6]" : "text-white hover:text-gray-400 before:bg-white"} lg:p-2 p-1 transition-all duration-200 ease-in-out transform rounded-full relative px-4 py-2 text-white before:absolute before:left-0 before:bottom-0 before:h-0.5 before:w-full before:bg- before:transform before:scale-x-0 before:transition-all before:duration-300 before:ease-in-out focus:before:scale-x-100 hover:before:scale-x-100 md:text-xl sm:text-lg font-mono`}
+              className={({ isActive }) => `${isActive ? "text-purple-700 " : "text-white hover:text-gray-400 "} lg:p-2 p-1 transition-all duration-200 ease-in-out transform rounded-full relative px-4 py-2 text-white before:bg-purple-800 before:absolute before:left-0 before:bottom-0 before:h-0.5 before:w-full before:bg- before:transform before:scale-x-0 before:transition-all before:duration-300 before:ease-in-out focus:before:scale-x-100 hover:before:scale-x-100 md:text-xl sm:text-lg font-mono`}
             >
               About Me
             </NavLink>
@@ -52,7 +52,7 @@ function Header() {
           <li>
             <NavLink
               to="/gallery"
-              className={({ isActive }) => `${isActive ? "text-purple-800 before:bg-[#7B53B6]" : "text-white hover:text-gray-400 before:bg-white"} lg:p-2 p-1 transition-all duration-200 ease-in-out transform rounded-full relative px-4 py-2 text-white before:absolute before:left-0 before:bottom-0 before:h-0.5 before:w-full before:bg- before:transform before:scale-x-0 before:transition-all before:duration-300 before:ease-in-out focus:before:scale-x-100 hover:before:scale-x-100 md:text-xl sm:text-lg font-mono`}
+              className={({ isActive }) => `${isActive ? "text-purple-700 " : "text-white hover:text-gray-400 "} lg:p-2 p-1 transition-all duration-200 ease-in-out transform rounded-full relative px-4 py-2 text-white before:bg-purple-800 before:absolute before:left-0 before:bottom-0 before:h-0.5 before:w-full before:bg- before:transform before:scale-x-0 before:transition-all before:duration-300 before:ease-in-out focus:before:scale-x-100 hover:before:scale-x-100 md:text-xl sm:text-lg font-mono`}
             >
               Gallery
             </NavLink>
@@ -60,7 +60,7 @@ function Header() {
           <li>
             <NavLink
               to="/contact"
-              className={({ isActive }) => `${isActive ? "text-purple-800 before:bg-[#7B53B6]" : "text-white hover:text-gray-400 before:bg-white"} lg:p-2 p-1 transition-all duration-200 ease-in-out transform rounded-full relative px-4 py-2 text-white before:absolute before:left-0 before:bottom-0 before:h-0.5 before:w-full before:bg- before:transform before:scale-x-0 before:transition-all before:duration-300 before:ease-in-out focus:before:scale-x-100 hover:before:scale-x-100 md:text-xl sm:text-lg font-mono`}
+              className={({ isActive }) => `${isActive ? "text-purple-700" : "text-white hover:text-gray-400 "} lg:p-2 p-1 transition-all duration-200 ease-in-out transform roundedbefore:bg-purple-800 -full relative px-4 py-2 text-white before:bg-purple-800 before:absolute before:left-0 before:bottom-0 before:h-0.5 before:w-full before:bg- before:transform before:scale-x-0 before:transition-all before:duration-300 before:ease-in-out focus:before:scale-x-100 hover:before:scale-x-100 md:text-xl sm:text-lg font-mono`}
             >
               Contact
             </NavLink>
