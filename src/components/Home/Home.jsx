@@ -1,6 +1,4 @@
-//import React from 'react'
 
-//import { useState } from "react"
 
 
 import myResume from './ResumeAakrit (1).pdf'
@@ -9,15 +7,7 @@ import myImage from "../../../public/aakritpassphoto.png"
 import OvalComponent from "./OvalComponent"
 
 function Home() {
-  //const [showResume, setShowResume] = useState(false); 
 
-  // const handleOpen = () => { 
-  //   setShowResume(true); 
-  // }; 
-  
-  // const handleClose = () => { 
-  //   setShowResume(false);
-  // };
   return (
     <div className="relative p-6 bg-transparent rounded-lg shadow-lg"> 
       <OvalComponent/>

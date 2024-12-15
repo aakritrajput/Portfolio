@@ -1,4 +1,4 @@
-import { NavLink } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
 
 function Header() {
   const navOpener = () => {
@@ -28,42 +28,35 @@ function Header() {
     }
   };
 
+  const location = useLocation(); 
+  const baseClasses = "lg:p-2 p-1 transition-all duration-200 ease-in-out transform rounded-full relative px-4 py-2 before:bg-purple-800 before:absolute before:left-0 before:bottom-0 before:h-0.5 before:w-full before:bg- before:transform before:scale-x-0 before:transition-all before:duration-300 before:ease-in-out focus:before:scale-x-100 hover:before:scale-x-100"; 
+  const activeClasses = "text-purple-700"; 
+  const inactiveClasses = "text-white hover:text-gray-400"
+
   return (
     <>
       <div className='flex w-auto justify-between lg:p-4 lg:m-3 lg:px-7 p-2 m-2 xs:p-[12px] xs:m-3 shadow-bottom'>
         <h1 className='text-white md:text-3xl xs:text-2xl text-xl font-mono'>Portfolio</h1>
         <ul className='sm:flex md:gap-10 sm:gap-6 hidden duration-300' id="navbar">
-          <li>
-            <NavLink
-              to="/"
-              className={({ isActive }) => `${isActive ? "text-purple-700 " : "text-white hover:text-gray-400 "} lg:p-2 p-1 transition-all duration-200 ease-in-out transform rounded-full relative px-4 py-2 text-white before:bg-purple-800 before:absolute before:left-0 before:bottom-0 before:h-0.5 before:w-full before:bg- before:transform before:scale-x-0 before:transition-all before:duration-300 before:ease-in-out focus:before:scale-x-100 hover:before:scale-x-100 md:text-xl sm:text-lg font-mono`}
-            >
-              Home
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              to="/about"
-              className={({ isActive }) => `${isActive ? "text-purple-700 " : "text-white hover:text-gray-400 "} lg:p-2 p-1 transition-all duration-200 ease-in-out transform rounded-full relative px-4 py-2 text-white before:bg-purple-800 before:absolute before:left-0 before:bottom-0 before:h-0.5 before:w-full before:bg- before:transform before:scale-x-0 before:transition-all before:duration-300 before:ease-in-out focus:before:scale-x-100 hover:before:scale-x-100 md:text-xl sm:text-lg font-mono`}
-            >
-              About Me
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              to="/gallery"
-              className={({ isActive }) => `${isActive ? "text-purple-700 " : "text-white hover:text-gray-400 "} lg:p-2 p-1 transition-all duration-200 ease-in-out transform rounded-full relative px-4 py-2 text-white before:bg-purple-800 before:absolute before:left-0 before:bottom-0 before:h-0.5 before:w-full before:bg- before:transform before:scale-x-0 before:transition-all before:duration-300 before:ease-in-out focus:before:scale-x-100 hover:before:scale-x-100 md:text-xl sm:text-lg font-mono`}
-            >
-              Gallery
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              to="/contact"
-              className={({ isActive }) => `${isActive ? "text-purple-700" : "text-white hover:text-gray-400 "} lg:p-2 p-1 transition-all duration-200 ease-in-out transform roundedbefore:bg-purple-800 -full relative px-4 py-2 text-white before:bg-purple-800 before:absolute before:left-0 before:bottom-0 before:h-0.5 before:w-full before:bg- before:transform before:scale-x-0 before:transition-all before:duration-300 before:ease-in-out focus:before:scale-x-100 hover:before:scale-x-100 md:text-xl sm:text-lg font-mono`}
-            >
-              Contact
-            </NavLink>
+          <li> 
+            <NavLink to="/" className={`${baseClasses} ${location.pathname === "/" ? activeClasses : inactiveClasses}`} > 
+             Home 
+            </NavLink> 
+          </li> 
+          <li> 
+            <NavLink to="/about" className={`${baseClasses} ${location.pathname === "/about" ? activeClasses : inactiveClasses}`} > 
+             About Me 
+            </NavLink> 
+          </li> 
+          <li> 
+            <NavLink to="/gallery" className={`${baseClasses} ${location.pathname === "/gallery" ? activeClasses : inactiveClasses}`} >
+             Gallery 
+            </NavLink> 
+          </li> 
+          <li> 
+            <NavLink to="/contact" className={`${baseClasses} ${location.pathname === "/contact" ? activeClasses : inactiveClasses}`} > 
+             Contact 
+            </NavLink> 
           </li>
         </ul>
 
