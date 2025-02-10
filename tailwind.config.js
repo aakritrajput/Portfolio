@@ -13,7 +13,7 @@ export default {
       },
       boxShadow: { 
         'bottom': '0 4px 4px rgba(2,2,35, 0.5)',
-        'allSides': '0px 0px 50px 30px  rgba(2,2,35, 0.5)'
+        'allSides': '0px 0px 30px 20px  rgba(2,2,35, 0.5)'
       }
       
     },

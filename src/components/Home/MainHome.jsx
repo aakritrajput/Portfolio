@@ -1,16 +1,12 @@
 import Home from './Home'
 import About from '../about/About'
-import Gallery from '../Gallery/Gallery'
-import Contact from '../contact/Contact'
 
 function MainHome() {
   return (
-    <>
+    <div>
       <Home/>
       <About/>
-      <Gallery/>
-      <Contact/>
-    </>
+    </div>
   )
 }
 

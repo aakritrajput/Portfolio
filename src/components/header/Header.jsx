@@ -49,6 +49,11 @@ function Header() {
             </NavLink> 
           </li> 
           <li> 
+            <NavLink to="/projects" className={`${baseClasses} ${location.pathname === "/projects" ? activeClasses : inactiveClasses}`} >
+             Projects 
+            </NavLink> 
+          </li> 
+          <li> 
             <NavLink to="/gallery" className={`${baseClasses} ${location.pathname === "/gallery" ? activeClasses : inactiveClasses}`} >
              Gallery 
             </NavLink> 
