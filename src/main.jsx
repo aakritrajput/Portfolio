@@ -7,8 +7,9 @@ import Root from './components/layout/Root.jsx'
 import About from './components/about/About.jsx'
 import Gallery from './components/Gallery/Gallery.jsx'
 import Contact from './components/contact/Contact.jsx'
-import MainHome from './components/Home/MainHome.jsx'
 import EnlargedPhoto from './components/enlargePhoto/EnlargedPhoto.jsx'
+import Home from './components/Home/Home.jsx'
+import ProjectsSlider from './components/projects/Projects.jsx'
 
 const router = createBrowserRouter([
   {
@@ -17,7 +18,7 @@ const router = createBrowserRouter([
     children:[
       {
         path:'',
-        element:<MainHome/>   
+        element:<Home/>   
       },
       {
         path:'about',
@@ -30,6 +31,10 @@ const router = createBrowserRouter([
       {
         path:'contact',
         element:<Contact/>
+      },
+      {
+        path: 'projects',
+        element: <ProjectsSlider/>
       }
     ]
   },{

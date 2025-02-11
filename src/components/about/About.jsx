@@ -16,7 +16,7 @@ function About() {
           </h2> 
           <p className="text-white mb-4"> 
           Hey there! I&apos;m Aakrit, a self-taught full-stack web developer with a passion for crafting modern, high-performance, and scalable web applications. From designing sleek user interfaces to building robust backend systems, I love every aspect of web development. <br /><br />
-          My journey in tech started with curiosity and a strong drive to learn. With no formal CS degree, I&apos;ve built my skills from the ground up through hands-on projects, open-source contributions, and continuous self-improvement. I specialize in React, Node.js, MongoDB, and other web technologies, always exploring new tools and frameworks to enhance my development workflow.
+          My journey in tech started with curiosity and a strong drive to learn. With no formal CS degree, I&apos;ve built my skills from the ground up through hands-on projects and continuous self-improvement. I specialize in React, Node.js, MongoDB, and other web technologies, always exploring new tools and frameworks to enhance my development workflow.
           </p> 
           <p className="text-white mb-4"> 
             In addition to my technical skills, I pride myself on being a strong communicator and an effective leader. 

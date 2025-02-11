@@ -2,8 +2,13 @@ import myResume from './Aakrit_Resume (2).pdf'
 import { motion } from 'motion/react'
 import myImage from "../../../public/aakritpassphoto.png"
 import OvalComponent from "./OvalComponent"
+import { useState } from 'react'
+
+const skills = ["JavaScript", "React", "Next.js", "Node.js", "MongoDB", "MySQL", "Tailwind CSS", "Git" , "hhhjk", "ghgj","MySQL", "Tailwind CSS", "Git" , "hhhjk", "ghgj"];
 
 function Home() {
+  
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <div className="relative p-2 sm:p-6 bg-transparent rounded-lg shadow-lg"> 
@@ -42,7 +47,38 @@ function Home() {
             </svg>
           </a>
       </div>
-      
+      <div className="flex flex-col items-center justify-center mt-2 bg-transparent p-5 text-white">
+      {/* Strengths Button */}
+      <motion.div
+        className="flex items-center justify-center text-center rounded-[20px] py-2 px-3 bg-purple-600 sm:text-xl font-bold cursor-pointer"
+        onClick={() => setIsOpen(!isOpen)}
+        whileTap={{ scale: 0.9 }}
+      >
+        {isOpen ? "Hide Strengths" : "Show Strengths"}
+      </motion.div>
+
+      {/* Skills Grid (expands from Strengths) */}
+      <motion.div
+        initial={{ opacity: 0, height: 0 }}
+        animate={{ opacity: isOpen ? 1 : 0, height: isOpen ? "auto" : 0 }}
+        transition={{ duration: 0.5 }}
+        className={`mt-6 grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 md:gap-4 gap-3 overflow-hidden`}
+      >
+        {isOpen &&
+          skills.map((skill, index) => (
+            <motion.div
+              key={skill}
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              className="flex items-center justify-center p-3 rounded-lg text-sm font-semibold sm:w-40 sm:h-20
+                         bg-gradient-to-br from-[#956bd4] via-gray-600 to-black border border-gray-400 shadow-[#7857a9] shadow-md"
+            >
+              {skill}
+            </motion.div>
+          ))}
+      </motion.div>
+    </div>
     </div>
   )
 }

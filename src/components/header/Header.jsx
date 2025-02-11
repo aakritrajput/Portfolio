@@ -37,7 +37,7 @@ function Header() {
     <>
       <div className='flex w-auto justify-between lg:p-4 lg:m-3 lg:px-7 p-2 m-2 xs:p-[12px] xs:m-3 shadow-bottom'>
         <h1 className='text-white md:text-3xl xs:text-2xl text-xl font-mono'>Portfolio</h1>
-        <ul className='sm:flex md:gap-10 sm:gap-6 hidden duration-300' id="navbar">
+        <ul className='md:flex md:gap-10 sm:gap-6 hidden duration-300' id="navbar">
           <li> 
             <NavLink to="/" className={`${baseClasses} ${location.pathname === "/" ? activeClasses : inactiveClasses}`} > 
              Home 
@@ -65,7 +65,7 @@ function Header() {
           </li>
         </ul>
 
-        <button className='text-white hover:text-[#7B53B6] text:xl flex sm:hidden' onClick={navOpener}>
+        <button className='text-white hover:text-[#7B53B6] text:xl flex md:hidden' onClick={navOpener}>
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <circle cx="12" cy="6" r="2" fill="currentColor" />
             <circle cx="12" cy="12" r="2" fill="currentColor" />
