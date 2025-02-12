@@ -1,25 +1,44 @@
 import { motion } from "framer-motion";
+import react from "../../../public/tech/react.svg" 
+import node from "../../../public/tech/nodedotjs.svg"
+import mongo from "../../../public/tech/mongodb.svg"
+import express from "../../../public/tech/express.svg"
+import js from "../../../public/tech/javascript.svg"
+import tailwind from "../../../public/tech/tailwindcss.svg"
+import html5 from "../../../public/tech/html5.svg"
+import appwrite from  "../../../public/tech/appwrite.svg"
+import c from "../../../public/tech/c.svg"
+import css3 from "../../../public/tech/css3.svg"
+import git from "../../../public/tech/git.svg"
+import github from "../../../public/tech/github.svg"
+import jwt from "../../../public/tech/jsonwebtokens.svg"
+import mysql from "../../../public/tech/mysql.svg"
+import postman from "../../../public/tech/postman.svg"
+import python from "../../../public/tech/python.svg" 
+import render from "../../../public/tech/render.svg"
+import sequelize from "../../../public/tech/sequelize.svg"
+import vercel from "../../../public/tech/vercel.svg"
 
 const techStack = [
-  { name: "React", src: "/public/tech/react.svg" },
-  { name: "Node.js", src: "/public/tech/nodedotjs.svg" },
-  { name: "MongoDB", src: "/public/tech/mongodb.svg" },
-  { name: "Express.js", src: "/public/tech/express.svg" },
-  { name: "JavaScript", src: "/public/tech/javascript.svg" },
-  { name: "Tailwind", src: "/public/tech/tailwindcss.svg" },
-  { name: "HTML5", src: "/public/tech/html5.svg" },
-  { name: "Appwrite", src: "/public/tech/appwrite.svg" },
-  { name: "C language", src: "/public/tech/c.svg" },
-  { name: "CSS3", src: "/public/tech/css3.svg" },
-  { name: "Git", src: "/public/tech/git.svg" },
-  { name: "Github", src: "/public/tech/github.svg" },
-  { name: "JWT", src: "/public/tech/jsonwebtokens.svg" },
-  { name: "MySql", src: "/public/tech/mysql.svg" },
-  { name: "Postman", src: "/public/tech/postman.svg" },
-  { name: "Python", src: "/public/tech/python.svg" },
-  { name: "Render", src: "/public/tech/render.svg" },
-  { name: "sequelize", src: "/public/tech/sequelize.svg" },
-  { name: "vercel", src: "/public/tech/vercel.svg" },
+  { name: "React", src: react  },
+  { name: "Node.js", src: node },
+  { name: "MongoDB", src: mongo },
+  { name: "Express.js", src: express },
+  { name: "JavaScript", src: js },
+  { name: "Tailwind", src: tailwind },
+  { name: "HTML5", src: html5 },
+  { name: "Appwrite", src: appwrite },
+  { name: "C language", src: c },
+  { name: "CSS3", src: css3 },
+  { name: "Git", src: git },
+  { name: "Github", src: github },
+  { name: "JWT", src: jwt },
+  { name: "MySql", src: mysql },
+  { name: "Postman", src: postman },
+  { name: "Python", src: python },
+  { name: "Render", src: render },
+  { name: "sequelize", src: sequelize },
+  { name: "vercel", src: vercel },
 ];
 
 const TechStack = () => {
