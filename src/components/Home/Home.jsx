@@ -1,10 +1,14 @@
 import myResume from './Aakrit_Resume (2).pdf'
 import { motion } from 'motion/react'
 import myImage from "../../../public/aakritpassphoto.png"
-import OvalComponent from "./OvalComponent"
+import OvalComponent from "./OvalComponent.jsx"
 import { useState } from 'react'
+import TechStack from './TechStack.jsx'
+import GithubStats from './GithubStats.jsx'
+import WorkWithMe from './WorkWithMe.jsx'
+import Footer from '../footer/Footer.jsx'
 
-const skills = ["JavaScript", "React", "Next.js", "Node.js", "MongoDB", "MySQL", "Tailwind CSS", "Git" , "hhhjk", "ghgj","MySQL", "Tailwind CSS", "Git" , "hhhjk", "ghgj"];
+const skills = ["JavaScript", "React","Express.js", "Node.js", "MongoDB", "MySQL", "Tailwind CSS", "Git" ,"Github","HTML", "CSS","Appwrite","Python","C Language", "Cloudinary","Nodemailer","Twilio","Vercel","Render","Postman","RESTful APIs","JWT"];
 
 function Home() {
   
@@ -15,8 +19,21 @@ function Home() {
       <OvalComponent/>
       <div className="relative grid grid-cols-1 sm:grid-cols-2 w-auto mx-auto px-5 xs:px-7 rounded-3xl bg-transparent   sm:px-10 sm:pb-10 pb-2 items-center justify-center">
         <div >
-          <motion.h1 initial={{y: -40, opacity: 0}} animate={{y: 0 , opacity:1}} transition={{duration:2 , ease: "anticipate"}} className="lg:text-[60px] md:text-[45px] sm:text-[38px] xs:text-[28px] text-[24px] mt-[12px] xs:mt-auto font-bold font-main text-[#6f4ba6] lg:pl-[120px] lg:mt-[150px]">Hi, I am Aakrit</motion.h1>
-          <motion.p initial={{y: -40, opacity: 0.1}} animate={{y: 0 , opacity:1}} transition={{duration:2 , ease: "anticipate"}} className="text-[#bfb1c6] lg:pl-[120px] mt-3 md:text-[18px] sm:text-[16px] text-[15px]">A self-taught full-stack developer passionate about building modern, scalable, and high-performance web applications. With expertise in frontend, backend, and databases, I thrive on crafting seamless user experiences with clean and efficient code.</motion.p>
+          <motion.h1
+            initial={{ y: -40, opacity: 0, backgroundPosition: "0% 50%" }}
+            animate={{ y: 0, opacity: 1, backgroundPosition: "200% 50%" }}
+            transition={{ duration: 2, ease: "anticipate" }}
+            className="gradient-text lg:text-[60px] md:text-[45px] sm:text-[38px] xs:text-[28px] text-[24px] mt-[12px] xs:mt-auto font-bold font-main text-[#6f4ba6] lg:pl-[120px] lg:mt-[150px] neon-glow"
+          >
+          Hi, I am Aakrit
+          </motion.h1>
+          <motion.p 
+            initial={{y: -40, opacity: 0.1}} 
+            animate={{y: 0 , opacity:1}} 
+            transition={{duration:2 , ease: "anticipate"}} 
+            className="text-[#bfb1c6] lg:pl-[120px] mt-3 md:text-[18px] sm:text-[16px] text-[15px]">
+            A self-taught full-stack developer passionate about building modern, scalable, and high-performance web applications. With expertise in frontend, backend, and databases, I thrive on crafting seamless user experiences with clean and efficient code.
+          </motion.p>
           <motion.button initial={{y: -40, opacity: 0.1}} animate={{y: 0 , opacity:1}} transition={{duration:2 , ease: "anticipate"}} className="text-[#6f4ba6] hover:text-[#956bd4] border-[3px] text-[18px] lg:ml-[120px]  hover:shadow-[0_0_30px_0_#6f4ba6] border-[#6f4ba6] hover:border-[#956bd4] p-1 mt-[20px] px-4 rounded-full hidden sm:flex">Resume</motion.button>
         </div>
         <div>
@@ -48,37 +65,45 @@ function Home() {
           </a>
       </div>
       <div className="flex flex-col items-center justify-center mt-2 bg-transparent p-5 text-white">
-      {/* Strengths Button */}
-      <motion.div
-        className="flex items-center justify-center text-center rounded-[20px] py-2 px-3 bg-purple-600 sm:text-xl font-bold cursor-pointer"
-        onClick={() => setIsOpen(!isOpen)}
-        whileTap={{ scale: 0.9 }}
-      >
-        {isOpen ? "Hide Strengths" : "Show Strengths"}
-      </motion.div>
-
-      {/* Skills Grid (expands from Strengths) */}
-      <motion.div
-        initial={{ opacity: 0, height: 0 }}
-        animate={{ opacity: isOpen ? 1 : 0, height: isOpen ? "auto" : 0 }}
-        transition={{ duration: 0.5 }}
-        className={`mt-6 grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 md:gap-4 gap-3 overflow-hidden`}
-      >
-        {isOpen &&
-          skills.map((skill, index) => (
-            <motion.div
-              key={skill}
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="flex items-center justify-center p-3 rounded-lg text-sm font-semibold sm:w-40 sm:h-20
-                         bg-gradient-to-br from-[#956bd4] via-gray-600 to-black border border-gray-400 shadow-[#7857a9] shadow-md"
-            >
-              {skill}
-            </motion.div>
-          ))}
-      </motion.div>
-    </div>
+          <motion.div
+            className="flex items-center justify-center text-center rounded-[20px] py-2 px-3 bg-purple-600 sm:text-xl font-bold cursor-pointer"
+            onClick={() => setIsOpen(!isOpen)}
+            whileTap={{ scale: 0.9 }}
+          >
+            {isOpen ? "Hide Strengths" : "Show Strengths"}
+          </motion.div>
+    
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: isOpen ? 1 : 0, height: isOpen ? "auto" : 0 }}
+            transition={{ duration: 0.5 }}
+            className={`mt-6 grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 md:gap-4 gap-3 overflow-hidden`}
+          >
+            {isOpen &&
+              skills.map((skill, index) => (
+                <motion.div
+                  key={skill}
+                  initial={{ opacity: 0, y: -20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className="flex items-center justify-center text-center p-3 rounded-lg text-sm font-semibold sm:w-40 sm:h-20
+                             bg-gradient-to-br from-[#956bd4] via-gray-600 to-black border border-gray-400 shadow-[#7857a9] shadow-md"
+                >
+                  {skill}
+                </motion.div>
+              ))}
+          </motion.div>
+      </div>
+      <TechStack/>
+      <GithubStats/>
+      <div className="w-full flex text-center items-center flex-col justify-center">
+        <h1 className='text-white font-bold text-[30px] py-5'>My LinkedIn&apos;s latest project post !!</h1>
+        <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7285879454399160320" 
+            className="w-full md:w-3/4 h-[500px] overflow-auto rounded-lg shadow-lg border border-gray-300">
+        </iframe>
+      </div>
+      <WorkWithMe/>
+      <Footer/>
     </div>
   )
 }

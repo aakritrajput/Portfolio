@@ -27,7 +27,7 @@ function About() {
           What I Do
           </h3> 
           <p className="text-white mb-4"> 
-            <ul className="">
+            <ul className="list-disc">
               <li><b>Frontend Development</b> - Creating responsive, interactive, and visually appealing UI/UX experiences using React, Tailwind CSS, and Framer Motion.</li>
               <li><b>Backend Development</b> - Building scalable, secure, and efficient server-side applications with Node.js, Express.js, and MongoDB.</li>
               <li><b>Full-Stack Projects</b> - Developing complete web applications, from designing APIs to deploying fully functional products.</li>

@@ -12,6 +12,25 @@ html {
     scroll-behavior: smooth;
 }
 
+.gradient-text {
+    background: linear-gradient(90deg, #6f4ba6, #a765bb, #c6c3c3, #bf81e9c6);
+    background-size: 400% 400%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientShift 4s ease infinite alternate;
+  }
+  
+  @keyframes gradientShift {
+    0% {
+      background-position: 0% 50%;
+    }
+    100% {
+      background-position: 200% 50%;
+    }
+  }
+  
+  
+
 @keyframes move-bg { 
     0% { transform: translateX(-50%) translateY(-50%); } 
     50% { transform: translateX(50%) translateY(50%); } 
