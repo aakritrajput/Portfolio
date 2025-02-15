@@ -1,7 +1,5 @@
 # Portfolio Website - Aakrit Rajput
 
-![Portfolio Preview](#) <!-- Add a screenshot URL here -->
-
 ## 🚀 Overview
 This is my personal **Portfolio Website** designed to showcase my **projects, skills, and experience**. It serves as a digital resume and a way for potential recruiters or collaborators to connect with me.
 
