@@ -34,7 +34,9 @@ function Home() {
             className="text-[#bfb1c6] lg:pl-[120px] mt-3 md:text-[18px] sm:text-[16px] text-[15px]">
             A self-taught full-stack developer passionate about building modern, scalable, and high-performance web applications. With expertise in frontend, backend, and databases, I thrive on crafting seamless user experiences with clean and efficient code.
           </motion.p>
-          <motion.button initial={{y: -40, opacity: 0.1}} animate={{y: 0 , opacity:1}} transition={{duration:2 , ease: "anticipate"}} className="text-[#6f4ba6] hover:text-[#956bd4] border-[3px] text-[18px] lg:ml-[120px]  hover:shadow-[0_0_30px_0_#6f4ba6] border-[#6f4ba6] hover:border-[#956bd4] p-1 mt-[20px] px-4 rounded-full hidden sm:flex">Resume</motion.button>
+          <a href={myResume} download>
+            <motion.button initial={{y: -40, opacity: 0.1}} animate={{y: 0 , opacity:1}} transition={{duration:2 , ease: "anticipate"}} className="text-[#6f4ba6] hover:text-[#956bd4] border-[3px] text-[18px] lg:ml-[120px]  hover:shadow-[0_0_30px_0_#6f4ba6] border-[#6f4ba6] hover:border-[#956bd4] p-1 mt-[20px] px-4 rounded-full hidden sm:flex">Resume</motion.button>
+          </a>
         </div>
         <div>
           <motion.div animate={{x:[0, 20, 20, 0 , 0], y:[0,-20, 0, -20, 0] , size: [1 , 0.9 , 1 , 0.8 , 1]}} transition={{duration: 4 }} drag dragConstraints={{left: 0 , right: 0 , top: 0 , bottom: 0}} className="w-full flex justify-center">
