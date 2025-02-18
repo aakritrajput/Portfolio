@@ -1,4 +1,4 @@
-import myResume from './Aakrit_Resume (2).pdf'
+import myResume from './Aakrit_Resume (4).pdf'
 import { motion } from 'motion/react'
 import myImage from "../../../public/aakritpassphoto.png"
 import OvalComponent from "./OvalComponent.jsx"
