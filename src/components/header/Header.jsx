@@ -7,7 +7,7 @@ function Header() {
     if (nav.classList.contains("hidden")) {
       nav.classList.remove("hidden");
       nav.style.display = 'block';
-      nav.style.backgroundColor = 'rgba(0,0,0,0.8)';
+      nav.style.backgroundColor = 'rgba(0,0,0,0.9)';
       nav.style.borderRadius = '30px';
       nav.style.width = '80vw';
       nav.style.textAlign = 'center';

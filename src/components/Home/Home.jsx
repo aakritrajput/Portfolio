@@ -2,18 +2,21 @@ import myResume from './Resume_Aakrit.pdf'
 import { motion } from 'motion/react'
 import myImage from "../../../public/aakritpassphoto.png"
 import OvalComponent from "./OvalComponent.jsx"
-import { useState } from 'react'
+import CertificationsSection from "./CertificationSection.jsx"
+import Experience from './Experience.jsx';
 import TechStack from './TechStack.jsx'
 import GithubStats from './GithubStats.jsx'
 import WorkWithMe from './WorkWithMe.jsx'
 import Footer from '../footer/Footer.jsx'
 
-const skills = ["JavaScript", "React","Express.js", "Node.js", "MongoDB", "MySQL", "Tailwind CSS", "Git" ,"Github","HTML", "CSS","Appwrite","Python","C Language", "Cloudinary","Nodemailer","Twilio","Vercel","Render","Postman","RESTful APIs","JWT"];
-
+const groupedSkills = {
+  "Frontend": ["Next.js","HTML", "CSS", "JavaScript","TypeScript", "React", "Tailwind CSS"],
+  "Backend": ["Django","Node.js", "Express.js", "Nodemailer", "Twilio", "JWT"],
+  "ML & AI": ["NumPy", "Pandas", "Matplotlib", "Scikit-learn", "Turi Create", "Jupyter Notebook"],
+  "Databases": ["MongoDB", "MySQL", "Appwrite", "Cloudinary"],
+  "Tools & Deployment": ["Git", "Github", "Vercel", "Render", "Postman", "RESTful APIs", "Python", "C Language"],
+};
 function Home() {
-  
-  const [isOpen, setIsOpen] = useState(false);
-
   return (
     <div className="relative p-2 sm:p-6 bg-transparent rounded-lg shadow-lg"> 
       <OvalComponent/>
@@ -40,7 +43,7 @@ function Home() {
         </div>
         <div>
           <motion.div animate={{x:[0, 20, 20, 0 , 0], y:[0,-20, 0, -20, 0] , size: [1 , 0.9 , 1 , 0.8 , 1]}} transition={{duration: 4 }} drag dragConstraints={{left: 0 , right: 0 , top: 0 , bottom: 0}} className="w-full flex justify-center">
-             <img className="rounded-[50%] border-[2px] border-[#956bd4] lg:max-h-[350px] md:max-h-[300px] transition-all duration-200 ease-in-out transform hover:shadow-[0_0_80px_0_#6f4ba6] shadow-[0_0_30px_0_#6f4ba6] xs:max-h-[230px] max-h-[180px] lg:ml-[25%] lg:mt-[20%] md:ml-[10%] mt-[10%]" src={myImage} alt="Photo" />
+             <img className="rounded-[50%] border-[2px] border-[#956bd4] lg:max-h-[350px] md:max-h-[300px] transition-all duration-200 ease-in-out transform hover:shadow-[0_0_80px_0_#6f4ba6] shadow-[0_0_30px_0_#6f4ba6] xs:max-h-[230px] max-h-[180px] lg:ml-[25%] lg:mt-[20%] md:ml-[10%] mt-[10%]" src={myImage} alt="Aakrit Rajput - Fullstack Developer" />
           </motion.div>
           <div  className="w-full flex justify-center">
             <a href={myResume} download>
@@ -66,45 +69,57 @@ function Home() {
             </svg>
           </a>
       </div>
-      <div className="flex flex-col items-center justify-center mt-2 bg-transparent p-5 text-white">
-          <motion.div
-            className="flex items-center justify-center text-center rounded-[20px] py-2 px-3 bg-purple-600 sm:text-xl font-bold cursor-pointer"
-            onClick={() => setIsOpen(!isOpen)}
-            whileTap={{ scale: 0.9 }}
-          >
-            {isOpen ? "Hide Strengths" : "Show Strengths"}
-          </motion.div>
-    
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: isOpen ? 1 : 0, height: isOpen ? "auto" : 0 }}
-            transition={{ duration: 0.5 }}
-            className={`mt-6 grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 md:gap-4 gap-3 overflow-hidden`}
-          >
-            {isOpen &&
-              skills.map((skill, index) => (
-                <motion.div
-                  key={skill}
-                  initial={{ opacity: 0, y: -20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="flex items-center justify-center text-center p-3 rounded-lg text-sm font-semibold sm:w-40 sm:h-20
-                             bg-gradient-to-br from-[#956bd4] via-gray-600 to-black border border-gray-400 shadow-[#7857a9] shadow-md"
-                >
-                  {skill}
-                </motion.div>
-              ))}
-          </motion.div>
+      <div className="w-full px-4 rounded-md sm:px-10 py-5 my-16 text-white bg-gradient-to-br from-[#00ffd5]/10 via-[#1a1a1a]/60 to-black/80">
+        <h2 className="text-3xl text-center font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#6f4ba6] to-[#00ffd5] mb-12">
+          My Tech Stack
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+          {Object.entries(groupedSkills).map(([group, skills], groupIndex, arr) => {
+            const isLastOdd = arr.length % 2 === 1 && groupIndex === arr.length - 1;
+            return (
+              <motion.div
+                key={group}
+                initial={{ opacity: 0, x: groupIndex % 2 === 0 ? -50 : 50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5 }}
+                className={`relative rounded-xl p-5 shadow-md border border-white/10 bg-white/10 backdrop-blur-xl backdrop-saturate-150 transition-all duration-300 hover:shadow-[0_0_30px_#6f4ba6]/70 ${
+                  isLastOdd ? "md:col-span-2 flex justify-center" : ""
+                }`}
+              >
+                <div className="w-full md:max-w-xl">
+                  <h3 className="text-xl font-semibold text-[#6f4ba6] mb-4 border-b border-[#6f4ba6] pb-1">
+                    {group}
+                  </h3>
+                  <div className="flex flex-wrap gap-3">
+                    {skills.map((skill) => (
+                      <motion.div
+                        key={skill}
+                        whileHover={{ scale: 1.1 }}
+                        className="px-4 py-2 text-sm rounded-full bg-gradient-to-br from-[#6f4ba6] via-gray-800 to-black border border-[#6f4ba6] text-white shadow-md hover:shadow-[0_0_20px_#6f4ba6] transition-all"
+                      >
+                        {skill}
+                      </motion.div>
+                    ))}
+                  </div>
+                </div>
+              </motion.div>
+            );
+          })}
+        </div>
+
       </div>
       <TechStack/>
+      <Experience/>
+      <CertificationsSection/>
+      <WorkWithMe/>
       <GithubStats/>
-      <div className="w-full flex text-center items-center flex-col justify-center">
+      <div className="w-full flex my-10 text-center items-center flex-col justify-center">
         <h1 className='text-white font-bold text-[30px] py-5'>My LinkedIn&apos;s latest project post !!</h1>
         <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7285879454399160320" 
             className="w-full md:w-3/4 h-[500px] overflow-auto rounded-lg shadow-lg border border-gray-300">
         </iframe>
       </div>
-      <WorkWithMe/>
       <Footer/>
     </div>
   )

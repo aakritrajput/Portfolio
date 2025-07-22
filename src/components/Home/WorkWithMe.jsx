@@ -31,7 +31,7 @@ const WorkWithMe = () => {
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
         >
-          See My Work
+          See My Projects
         </motion.button>
       </div>
     </div>
